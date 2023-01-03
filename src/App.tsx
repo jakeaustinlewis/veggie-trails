@@ -1,9 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return <div className='App'>Hello World! Starting a to-do List</div>;
+import styled from 'styled-components';
+import { Navbar } from './Navbar';
+
+const Wrapper = styled.div`
+  min-height: 100vh;
+  height: 100%;
+`;
+
+export function App(): JSX.Element {
+  return (
+    <Wrapper>
+      <Navbar />
+      Hello World! Starting a to-do List
+    </Wrapper>
+  );
 }
-
-export default App;

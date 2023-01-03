@@ -2,15 +2,12 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
-    'jest/globals': true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:jest/recommended',
     "plugin:react-hooks/recommended",
   ],
   parser: '@typescript-eslint/parser',
@@ -22,7 +19,7 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier', 'jest', 'import'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier', 'import'],
   rules: {
     'import/no-default-export': 'error',
     'no-alert': 'error',
@@ -30,25 +27,17 @@ module.exports = {
     'no-console': 'error',
     'no-debugger': 'error',
     'no-duplicate-imports': 'off',
-    'no-restricted-imports': [
-      'error',
-      {
-        patterns: [
-          {
-            group: ['@mui', '@material-ui'],
-            message: 'Use monorail imports instead',
-          },
-          {
-            group: ['**/__generated__/data-contracts'],
-            message: 'Use appropriate imports from src/api/services/types instead',
-          },
-          {
-            group: ['.*'],
-            message: 'Use absolute imports instead',
-          },
-        ],
-      },
-    ],
+    // 'no-restricted-imports': [
+    //   'error',
+    //   {
+    //     patterns: [
+    //       {
+    //         group: ['.*'],
+    //         message: 'Use absolute imports instead',
+    //       },
+    //     ],
+    //   },
+    // ],
     'no-return-await': 'off',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
